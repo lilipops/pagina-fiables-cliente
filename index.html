@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/homeslider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/coockies.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active ">C.Fiables</a>
+        <a id="login" href="login.html" >Log In</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"> 
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+   <div class="container">
+
+       <section class="all_categories">
+           <article class="collection">
+               <h2 class="collection_title">Interior</h2>
+               <section class="collection_sub">
+                    <a href="" class="collection_block">
+                        <img src="images/foto1.jpeg" alt="" class="collection_img">
+                        <h3 class="block_title">Pladur</h3>
+                    </a>
+                    <a href="" class="collection_block">
+                        <img src="images/foto1.jpeg" alt="" class="collection_img">
+                        <h3 class="block_title">Techo</h3>
+                    </a>
+                    <a href="" class="collection_block">
+                        <img src="images/foto1.jpeg" alt="" class="collection_img">
+                        <h3 class="block_title">Suelo</h3>
+                    </a>
+                    <a href="" class="collection_block">
+                        <img src="images/foto1.jpeg" alt="" class="collection_img">
+                        <h3 class="block_title">Pintura</h3>
+                    </a>
+                    <a href="" class="collection_block">
+                        <img src="images/foto1.jpeg" alt="" class="collection_img">
+                        <h3 class="block_title">Paredes</h3>
+                    </a>
+            
+               </section>
+           </article>
+           <article class="collection">
+                <h2 class="collection_title">Exterior</h2>
+                <section class="collection_sub">
+                    <a href="" class="collection_block">
+                        <img src="images/foto1.jpeg" alt="" class="collection_img">
+                        <h3 class="block_title">Pintura</h3>
+                    </a>
+                    <a href="" class="collection_block">
+                        <img src="images/foto1.jpeg" alt="" class="collection_img">
+                        <h3 class="block_title">Techo</h3>
+                    </a>
+                    <a href="" class="collection_block">
+                        <img src="images/foto1.jpeg" alt="" class="collection_img">
+                        <h3 class="block_title">Pladur</h3>
+                    </a>
+                    <a href="" class="collection_block">
+                        <img src="images/foto1.jpeg" alt="" class="collection_img">
+                        <h3 class="block_title">Suelos</h3>
+                    </a>
+                    <a href="" class="collection_block">
+                        <img src="images/foto1.jpeg" alt="" class="collection_img">
+                        <h3 class="block_title">Baños</h3>
+                    </a>
+                    
+               </section>
+           </article>
+       </section>
+   </div>
+
+      
+</div> 
+<div class="popup">
+      
+</div>
+<footer class="footer">
+    <div class="container_footer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">Nuestros Servicios</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Trabajos</h4>
+                <ul>
+                    <li><a href="#">Pinturas</a></li>
+                    <li><a href="#">Pladur</a></li>
+                    <li><a href="#">Suelos</a></li>
+                    <li><a href="#">Tejados</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="js/script.js"></script>
+    <script src="js/logout.js"></script>
+    <script defer>
+    window.onload = function() {
+  try {
+    var url_string = (window.location.href);
+    var url = new URL(url_string);
+    let code = url.searchParams.get("code")
+    let popup = document.querySelector('.popup')
+    if(code == "registrado") {
+        popup.innerHTML = "Registro enviado correctamente"
+        popup.style.visibility = 'visible'
+    }
+  } catch (err) {
+    console.log("Issues with Parsing URL Parameter's - " + err);
+  }
+}
+        
+    </script>
+</body>
+</html>

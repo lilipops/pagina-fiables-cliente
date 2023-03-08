@@ -1,0 +1,213 @@
+  
+
+<!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/logstyle.css">
+    <script src="js/coockies.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="876367545259-a9iol2t9ooukjnkvvd8i2f58sc5ircpu.apps.googleusercontent.com">
+</head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active ">C.Fiables</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"> 
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="alltogether">
+    <div class="container">
+      <div class="forms">
+          <div class="form login">
+              <span class="title">Login</span>
+
+              <form action="#">
+                
+                  <div class="input-field">
+                      <input id="emaillogin" type="text" placeholder="Enter your email" required>
+                      <i class="uil uil-envelope icon"></i>
+                  </div>
+                  <div class="input-field">
+                      <input type="password" class="password" id="passwd" placeholder="Enter your password" required>
+                      <i class="uil uil-lock icon"></i>
+                      <i class="uil uil-eye-slash showHidePw"></i>
+                  </div>
+
+                  <div class="checkbox-text">
+                      <div class="checkbox-content">
+                          <input type="checkbox" id="logCheck">
+                          <label for="logCheck" class="text">Remember me</label>
+                      </div>
+                      
+                      <a href="#" class="text">Forgot password?</a>
+                  </div>
+                  <div id="logerror" style="display: none;margin: 15px 5px -15px 5px;text-align: center;">
+                      <p style="color: red;">La contraseña o usuario esta mal</p>
+                  </div>
+                  <div class="input-field button">
+                      <input type="button" value="Login" onclick="requestLogin()">
+                  </div>
+              </form>
+
+              <div class="login-signup">
+                  <span class="text">Not a member?
+                      <a href="#" class="text signup-link">Request Singup</a>
+                  </span>
+              </div>
+              <div class="g-signin2" data-onsuccess="onSignIn"></div>
+          </div>
+
+          <!-- Registration Form -->
+          <div class="form signup">
+              <span class="title">Registration</span>
+
+              <form action="#">
+                <div class="custom-select" style="max-width:200px;">
+                  <select id="who">
+                   <option value="quien-eres" selected disabled hidden>Tipo de cliente</option>
+                    <option value="empresa">Empresa</option>
+                    <option value="particular">Particular</option>
+                  </select>
+                </div>
+                  <div class="input-field">
+                      <input id="yourname" type="text" placeholder="Enter your name" required>
+                      <i class="uil uil-user"></i>
+                  </div>
+                  <div class="input-field">
+                      <input id="email" type="text" placeholder="Enter your email" required>
+                      <i class="uil uil-envelope icon"></i>
+                      <i class=""></i>
+                  </div>
+                  <div id="wrongEmail" style="color: red;width: 100%;  margin-top: 5px; margin-bottom: -29px; display: none;">
+                    Correo Invalido
+                  </div>
+                  <div class="input-field">
+                      <input id="tlf" type="text" placeholder="Tlf" required>
+                      <i class="uil uil-phone icon"></i>
+                  </div>
+                  <div id="wrongTel" style="color: red;width: 100%;  margin-top: 5px; margin-bottom: -29px; display: none;">
+                    Telefono Invalido
+                  </div>
+                  <div class="input-field">
+                      <input id="adress" type="text" placeholder="Enter your adress" required>
+                      <i class="uil uil-user-location icon"></i>
+                  </div>
+                  <div class="input-field">
+                    <input id="postalcode" type="text" placeholder="Codigo postal" required>
+                    <i class="uil uil-location-point icon"></i>
+                </div>
+                  <div class="custom-select" style="max-width:600px;">
+                    <label for="trabajos">Tipo de trabajo: </label>
+                    <select name="trabajos" id="trabajos">
+                      <option value="empresa">Trabajos</option>
+                      <option value="particular">Obra general</option>
+                      <option value="empresa">Pintura</option>
+                      <option value="particular">Techo</option>
+                      <option value="empresa">Suelos</option>
+                    </select>
+                  </div>
+                  <div class="checkbox-text">
+                      <div class="checkbox-content">
+                          <input type="checkbox" id="termCon">
+                          <label for="termCon" class="text">I accepted all terms and conditions</label>
+                      </div>
+                  </div>
+                  <div id="Error" style="color: red;width: 100%; text-align: center; margin-top: 3px;">
+
+                    </div>
+                  <div id="registerButton" class="input-field button">
+                      <input type="button" value="Request Singup" onclick="requestSignup()">
+                  </div>
+               
+              </form>
+
+              <div class="login-signup">
+                  <span class="text">Already a member?
+                      <a href="#" class="text login-link">Login Now</a>
+                  </span>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  
+  <div class="popup">
+      
+  </div>
+  <footer class="footer">
+    <div class="container_footer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">Nuestros Servicios</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Trabajos</h4>
+                <ul>
+                    <li><a href="#">Pinturas</a></li>
+                    <li><a href="#">Pladur</a></li>
+                    <li><a href="#">Suelos</a></li>
+                    <li><a href="#">Tejados</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+    <script defer>
+        window.onload = function() {
+  try {
+    var url_string = (window.location.href);
+    console.log(url_string)
+    var url = new URL(url_string);
+    var register = url.searchParams.get("register");
+    let code = url.searchParams.get("code")
+    const container = document.querySelector(".container")
+    let popup = document.querySelector('.popup')
+    if(code == "registeredUser") {
+
+      popup.innerHTML = "Usuario ya registrado, haz el Login"
+      popup.style.visibility = 'visible'
+      console.log('nofunciona222')
+
+    }
+    console.log('nofunciona3333')
+
+  } catch (err) {
+    console.log("Issues with Parsing URL Parameter's - " + err);
+  }
+}
+    </script>
+</body>
+</html>
